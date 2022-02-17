@@ -1,7 +1,9 @@
 import m from 'mithril';
 
-export default function(): m.Component {
-    return {
-        view: (vnode: m.Vnode) => <span style='color: green'>{vnode.children}</span>
-    };
+export default class implements m.ClassComponent {
+    view(vnode: m.Vnode) {
+        return (
+            <span style='color: green'>{vnode.children}</span>
+        )
+    }
 }
